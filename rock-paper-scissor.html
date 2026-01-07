@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <p>Rock Paper Scissors</p>
-  <button onclick="
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Rock Paper Scissors</p>
+    <button
+      onclick="
   const move1=Math.random();
-  if(move1<=0.33)
+  if(move1>=0 && move1<1/3)
 {
   alert('You Picked Rock.computer picked Rock.Tie');
 }
-else if(move1<=0.66)
+else if(move1>=1/3 && move1 <2/3)
 {
   alert('You Picked Rock.computer picked paper.you lose');
 }
@@ -21,15 +22,18 @@ else
 {
   alert('you picked Rock.computer picked scissor.you win');
 }
-  ">Rock</button>
-  <button
-  onclick="
+  "
+    >
+      Rock
+    </button>
+    <button
+      onclick="
   const move2=Math.random();
-  if(move2<=0.33)
+if(move2>=0 && move2<1/3)
 {
   alert('You Picked Paper.computer picked Rock.you win');
 }
-else if(move2<=0.66)
+else if(move2>=1/3 && move2 <2/3)
 {
   alert('You Picked paper.computer picked paper.tie');
 }
@@ -37,15 +41,18 @@ else
 {
   alert('you picked paper.computer picked scissor.you lose');
 }
-  ">Paper</button>
-  <button
-  onclick="
+  "
+    >
+      Paper
+    </button>
+    <button
+      onclick="
   const move3=Math.random();
-  if(move3<=0.33)
+  if(move3>=0 && move3<1/3)
 {
   alert('You Picked Scissor.computer picked Rock.you lose');
 }
-else if(move3<=0.66)
+else if(move3>=1/3 && move3 <2/3)
 {
   alert('You Picked Scissor.computer picked paper.you win');
 }
@@ -53,7 +60,9 @@ else
 {
   alert('you picked Scissor.computer picked scissor.tie');
 }
-  ">Scissor</button>
-  
-</body>
+  "
+    >
+      Scissor
+    </button>
+  </body>
 </html>
