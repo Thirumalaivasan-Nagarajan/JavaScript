@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function</title>
+  </head>
+  <body>
+    <h1>Rock Paper Scissors</h1>
+    <button onclick=" let comMove=computerMove(); display(comMove,'scissor');">Scissor</button>
+    <button onclick=" let comMove=computerMove(); display(comMove,'rock');">Rock</button>
+    <button onclick=" let comMove=computerMove(); display(comMove,'paper');">Paper</button>
+    
+  
+    <script>
+      let comMove;
+      function computerMove() {
+        let result;
+        const random = Math.random();
+        if (random <= 1/3) {
+          result = 'rock';
+        } else if (random <= 2/3) {
+          result = 'paper';
+        } else {
+          result = 'scissor';
+        }
+        return result;
+      }
+      function display(comMove, userMove) {
+        if (comMove === userMove) {
+          alert(`you choose ${userMove}.computer choose ${comMove}.tie`);
+        } else if (
+          (comMove === 'rock' && userMove === 'scissor') ||
+          (comMove === 'paper' && userMove === 'rock' ) ||
+          (comMove === 'scissor' && userMove === 'paper')
+        ) {
+          alert(`you choose ${userMove}.computer move ${comMove}.you lose`);
+        } else {
+          alert(`you choose ${userMove}.computer move ${comMove}.you win`);
+        }
+      }
+    </script>
+  </body>
+</html>
