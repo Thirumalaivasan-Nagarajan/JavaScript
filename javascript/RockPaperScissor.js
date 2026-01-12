@@ -1,0 +1,54 @@
+
+let score = JSON.parse(localStorage.getItem("score")) || {
+  win: 0,
+  lose: 0,
+  tie: 0,
+};
+let comMove;
+function computerMove() {
+  let result;
+  const random = Math.random();
+  if (random <= 1 / 3) {
+    result = 'rock';
+  } else if (random <= 2 / 3) {
+    result = 'paper';
+  } else {
+    result = 'scissor';
+  }
+  return result;
+}
+
+function display(comMove, userMove) {
+  if (comMove === userMove) {
+    score.tie++;
+    displayResult(comMove, userMove, "Tie");
+  } else if (
+    (comMove === "rock" && userMove === "scissor") ||
+    (comMove === "paper" && userMove === "rock") ||
+    (comMove === "scissor" && userMove === "paper")
+  ) {
+    score.lose++;
+    displayResult(comMove, userMove, "Lose");
+  } else {
+    score.win++;
+    displayResult(comMove, userMove, "Win");
+  }
+  updateScore();
+}
+function updateScore() {
+  localStorage.setItem("score", JSON.stringify(score));
+  document.querySelector(
+    ".js-score"
+  ).innerText = `Win:${score.win},Losses:${score.lose},Tie:${score.tie}`;
+}
+function displayResult(comMove, userMove, result) {
+  if (result === "Tie") {
+    document.querySelector(".js-result").innerText = result;
+  } else {
+    document.querySelector(".js-result").innerText = `You ${result}`;
+  }
+
+  document.querySelector(
+    ".js-com-user-move"
+  ).innerHTML = `You <img class="image" src="../image/${userMove}-emoji.png" /><img class="image" src="../image/${comMove}-emoji.png" /> computer`;
+}
