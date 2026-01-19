@@ -1,2 +1,2 @@
-Hello Everyone Myself Thirumalaivasan 
-
+Hi I'm Thirumalaivasan...
+Currently studying B.Tech-AIML second year in BIT.
