@@ -3,9 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Advanced Functions</title>
 </head>
 <body>
-  
+  <script>
+    /*
+    function greeting()
+    {
+      console.log('hello');
+    }
+    greeting();
+    
+    const functionAsAnValue=function firstClassCitizen()      //Function that can be used an value for an variable
+    {
+      console.log('In Javascript Functions are considered as an first class citizen');
+    };
+    functionAsAnValue();
+    console.log(typeof functionAsAnValue);
+
+    const anonymousFunction=function()  //Anonymous function(function without an name) in javascript
+    {
+      console.log('Hello I am was an anonymous function in javascript');
+    };
+    anonymousFunction();
+
+    const object= {             //Function(method) that was living inside an object
+      name:'thirumalaivasan',
+      method:function ()
+      {
+        console.log("I am function living inside an object,am also called method");
+      }
+    };
+    object.method();
+    /*Callback in javascript*/ 
+    /*
+    function demo(name,callback)
+    {
+      console.log('hello '+name);//first ofall function can do its work
+      callback();//next demo can call the function(callback) that can be passes as an argument
+      //this is called callback function
+    }
+    function say()
+    {
+      console.log('Good Bye');
+    }
+    demo('Thirumalaivasan',say);
+    */
+   /*
+   setTimeout(function()         //setTimeout default function in javascript,it is an asynchronous function
+  {
+    console.log('I can be called after an five seconds');
+  },10000);
+  */
+ /*
+ setInterval(function() //this function can runned for every 4 seconds,this is the functionality of setInterval,,it is an asynchronous function
+{
+  console.log("I am can runned for every 4 seconds");
+},4000);
+*/
+  </script>
 </body>
 </html>
