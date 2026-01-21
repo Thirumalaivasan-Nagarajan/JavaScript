@@ -17,11 +17,31 @@
    myArray.splice(7,2);i
    console.log(myArray);
    */
+  /*
   const arrayForLoop=['thiru','malai','vasan'];
   for(let i=0;i<arrayForLoop.length;i++)
   {
     console.log(`${i}---${arrayForLoop[i]}`);
   }
+    */
+   /*
+   const array1=[1,2,3];
+   //const array2=array1;
+   const array2=array1.slice();
+   array2.push(18);
+   console.log(array1);
+   */
+  //Destructuring of an array
+  const array1=[1,2,3];
+  const [firstValue,thirdvalue]=array1;
+  console.log(firstValue);
+  console.log(thirdvalue);
+  const object= 
+  {
+    name:'thiru',ID:'AL209',native:'adirai'
+  };
+  const {native,name,ID}=object;
+  console.log(native+name+ID);
   </script>
 </body>
 </html>
