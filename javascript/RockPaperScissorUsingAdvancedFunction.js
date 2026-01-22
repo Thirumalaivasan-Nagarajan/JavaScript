@@ -51,14 +51,16 @@ function displayResult(comMove, userMove, result) {
   document.querySelector(
     ".js-com-user-move"
   ).innerHTML = `You <img class="image" src="../image/${userMove}-emoji.png" /><img class="image" src="../image/${comMove}-emoji.png" /> computer`;
+  
 }
+
 let isAutoPlaying=true;
 let intervalID;
 function autoPlay()
 {
   if(isAutoPlaying)
   {
-intervalID=setInterval(function()
+intervalID=setInterval(()=>
 {
   const comMove=computerMove();
   const userMove=computerMove();
@@ -73,6 +75,7 @@ isAutoPlaying=false;
   }
   
 }
+
 function changeButton()
 {
   let content=document.querySelector('.auto-play-button').value ;
@@ -85,3 +88,16 @@ function changeButton()
     document.querySelector('.auto-play-button').value='Auto Play';
   }
 }
+
+document.querySelector('.js-scissor-button').addEventListener('click',()=>
+{
+  comMove=computerMove(); display(comMove,'scissor');
+});
+document.querySelector('.js-rock-button').addEventListener('click',()=>
+{
+  comMove=computerMove(); display(comMove,'rock');
+});
+document.querySelector('.js-paper-button').addEventListener('click',()=>
+{
+  comMove=computerMove(); display(comMove,'paper');
+});

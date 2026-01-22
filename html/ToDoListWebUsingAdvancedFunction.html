@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="../css/ToDoListUsingAdvancedFunction.css" />
+    <script src="../javascript/ToDoListUsingAdvancedFunction.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TODO List Web</title>
+  </head>
+  <body>
+    <p>Todo List</p>
+    <div class="todo-input-grid">
+      <input placeholder="Todo name" class="js-input" />
+    <input type="date" class="js-date-time" />
+    <button
+      onclick="
+        addTask();
+        display();
+      "
+      class="add-button"
+    >
+      Add
+    </button>
+    </div>
+    
+    <div class="container todo-grid"></div>
+  </body>
+</html>

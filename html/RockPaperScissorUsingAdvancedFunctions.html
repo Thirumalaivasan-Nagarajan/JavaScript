@@ -4,26 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="../css/RockPaperScissorUsingAdvancedFunctions.css" rel="stylesheet">
-    <script src="../javascript/RockPaperScissorUsingAdvancedFunction.js"></script>
+   
     <title>Function</title>
   </head>
   <body>
     <h1>Rock Paper Scissors</h1>
     <button
-      onclick="  comMove=computerMove(); display(comMove,'scissor');"
-      class="move-button"
+      
+      class="move-button js-scissor-button"
     >
       <img class="image" src="../image/scissor-emoji.png" />
     </button>
     <button
-      onclick="  comMove=computerMove(); display(comMove,'rock');"
-      class="move-button"
+      class="move-button js-rock-button"
     >
       <img class="image" src="../image/rock-emoji.png" />
     </button>
     <button
-      onclick=" comMove=computerMove(); display(comMove,'paper');"
-      class="move-button"
+      
+      class="move-button js-paper-button"
     >
       <img class="image" src="../image/paper-emoji.png" />
     </button>
@@ -39,5 +38,6 @@
       Reset Score
     </button>
     <button class="auto-play-button" onclick="autoPlay();changeButton();">Auto Play</button>
+     <script src="../javascript/RockPaperScissorUsingAdvancedFunction.js"></script>
   </body>
 </html>

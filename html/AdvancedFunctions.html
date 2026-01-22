@@ -1,14 +1,27 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Advanced Functions</title>
-</head>
-<body>
-  <script>
-    /*
-    function greeting()
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced Functions</title>
+  </head>
+  <body>
+    <button class="click-button">Click</button>
+    <script>
+
+ const button=document.querySelector('.click-button');
+ button.addEventListener('click',()=>
+{
+  button.innerHTML='Clicked';
+});
+
+
+
+
+
+
+      /*
+function greeting()
     {
       console.log('hello');
     }
@@ -35,9 +48,8 @@
       }
     };
     object.method();
-    /*Callback in javascript*/ 
-    /*
-    function demo(name,callback)
+    //Callback in javascript
+     function demo(name,callback)
     {
       console.log('hello '+name);//first ofall function can do its work
       callback();//next demo can call the function(callback) that can be passes as an argument
@@ -48,19 +60,47 @@
       console.log('Good Bye');
     }
     demo('Thirumalaivasan',say);
-    */
-   /*
-   setTimeout(function()         //setTimeout default function in javascript,it is an asynchronous function
+     setTimeout(function()         //setTimeout default function in javascript,it is an asynchronous function
   {
     console.log('I can be called after an five seconds');
   },10000);
-  */
- /*
- setInterval(function() //this function can runned for every 4 seconds,this is the functionality of setInterval,,it is an asynchronous function
+  setInterval(function() //this function can runned for every 4 seconds,this is the functionality of setInterval,,it is an asynchronous function
 {
   console.log("I am can runned for every 4 seconds");
 },4000);
+const array=['thiru','malai','vasan',1,2,2.3,233.4,'The king mega'];
+array.forEach(function(value,index)
+{
+  console.log(index+'---------'+value);
+});
+const arrowFunction=()=>  //this is called as arrow function in  Javascript and Lambda function in Java.
+{
+  console.log('Hello everyone ,i am the first arrow function of Javascript');
+};
+arrowFunction();
+
+
+const arrowFunctionWithOneParameter= parameter1 => //this function has only one parameter,so parenthesis is optional
+{
+  console.log('This function contains only one parameter');
+};
+const arrowFunctionInOneLine= parameter=>2+parameter; 
+//This function has only one line and that returns something,so return keyword and curly braces are optionla
+console.log(arrowFunctionInOneLine(16));
+
+
+const obj= 
+{
+  function1:()=>
+{
+  console.log('Hello Everyone');  //Arrow function inside object...
+},
+function2()
+{
+console.log('Hello everyone');   //shorthand property for creating method inside object...
+}
+}
 */
-  </script>
-</body>
+    </script>
+  </body>
 </html>
