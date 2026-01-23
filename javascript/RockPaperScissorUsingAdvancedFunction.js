@@ -101,3 +101,19 @@ document.querySelector('.js-paper-button').addEventListener('click',()=>
 {
   comMove=computerMove(); display(comMove,'paper');
 });
+document.body.addEventListener('keydown',event=>
+{
+
+  if(event.key==='r')
+  {
+    comMove=computerMove(); display(comMove,'rock');
+  }
+  else if(event.key==='s')
+  {
+    comMove=computerMove(); display(comMove,'scissor');
+  }
+  else if(event.key==='p')
+  {
+    comMove=computerMove(); display(comMove,'paper');
+  }
+});

@@ -20,11 +20,26 @@ function display() {
   <div>
    ${date}
    </div>
-  <button onclick="todoList.splice(${index},1);display();" class="delete-button" >Delete</button>
+  <button  class="delete-button js-delete-button" >Delete</button>
   `;
     HTML += todo;
   });
   
-  console.log(HTML);
   document.querySelector('.container').innerHTML = HTML;
+  document.querySelectorAll('.js-delete-button').forEach((element,index)=>
+{
+  console.log(element);
+  element.addEventListener('click',()=>{
+    todoList.splice(index,1);
+    display();
+  }
+);
+});
 }
+document.querySelector('.js-add-button').addEventListener('click',()=>
+{
+  addTask();
+   display();
+});
+
+
